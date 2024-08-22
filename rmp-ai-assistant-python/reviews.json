@@ -1,0 +1,71 @@
+{
+    "reviews": [
+      {
+        "professor": "Mark ",
+        "review": "Great professor",
+        "subject": "Math",
+        "stars": 5
+      },
+        {
+            "professor": "John",
+            "review": "Bad professor",
+            "subject": "Math",
+            "stars": 1
+        },
+        {
+            "professor": "Mark",
+            "review": "Great professor",
+            "subject": "Math",
+            "stars": 5
+        },
+        {
+            "professor": "John",
+            "review": "Bad professor",
+            "subject": "Math",
+            "stars": 1
+        },
+        {
+            "professor": "Mark",
+            "review": "Great professor",
+            "subject": "Math",
+            "stars": 5
+        },
+        {
+            "professor": "John",
+            "review": "Bad professor",
+            "subject": "Math",
+            "stars": 1
+        },
+        {
+            "professor": "Mark",
+            "review": "Great professor",
+            "subject": "Math",
+            "stars": 5
+        },
+        {
+            "professor": "John",
+            "review": "Bad professor",
+            "subject": "Math",
+            "stars": 1
+        },
+        {
+            "professor": "Mark",
+            "review": "Great professor",
+            "subject": "Math",
+            "stars": 5
+        },
+        {
+            "professor": "John",
+            "review": "Bad professor",
+            "subject": "Math",
+            "stars": 1
+        },
+        {
+            "professor":"Mark",
+            "review":"Bad professor",
+            "subject":"science",
+            "stars":1
+        }
+
+    ]
+  }
