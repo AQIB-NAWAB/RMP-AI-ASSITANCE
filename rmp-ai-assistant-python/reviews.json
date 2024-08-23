@@ -1,71 +1,65 @@
 {
     "reviews": [
       {
-        "professor": "Mark ",
-        "review": "Great professor",
-        "subject": "Math",
+        "professor": "Dr. Mark Bennett",
+        "review": "Dr. Bennett was an outstanding professor for Calculus II. At first, I was intimidated by the complexity of the subject, but his teaching style made everything so much clearer. He has a way of breaking down difficult concepts into manageable parts, and his examples always connected well with real-world applications. I remember one time when I was struggling with a series problem, and he took extra time after class to walk me through it step by step. Thanks to him, I not only passed the class with flying colors but also gained a deeper appreciation for mathematics.",
+        "subject": "Calculus II",
         "stars": 5
       },
-        {
-            "professor": "John",
-            "review": "Bad professor",
-            "subject": "Math",
-            "stars": 1
-        },
-        {
-            "professor": "Mark",
-            "review": "Great professor",
-            "subject": "Math",
-            "stars": 5
-        },
-        {
-            "professor": "John",
-            "review": "Bad professor",
-            "subject": "Math",
-            "stars": 1
-        },
-        {
-            "professor": "Mark",
-            "review": "Great professor",
-            "subject": "Math",
-            "stars": 5
-        },
-        {
-            "professor": "John",
-            "review": "Bad professor",
-            "subject": "Math",
-            "stars": 1
-        },
-        {
-            "professor": "Mark",
-            "review": "Great professor",
-            "subject": "Math",
-            "stars": 5
-        },
-        {
-            "professor": "John",
-            "review": "Bad professor",
-            "subject": "Math",
-            "stars": 1
-        },
-        {
-            "professor": "Mark",
-            "review": "Great professor",
-            "subject": "Math",
-            "stars": 5
-        },
-        {
-            "professor": "John",
-            "review": "Bad professor",
-            "subject": "Math",
-            "stars": 1
-        },
-        {
-            "professor":"Mark the don",
-            "review":"Bad professor",
-            "subject":"science",
-            "stars":1
-        }
-
+      {
+        "professor": "Dr. John Anderson",
+        "review": "I found Dr. Anderson's lectures on Linear Algebra quite challenging. He is extremely knowledgeable, but his teaching style is not very engaging. The lectures felt very rushed, and he rarely paused to check if students were keeping up. I often found myself lost during his explanations, especially during theorems and proofs. Despite studying hard, I struggled with the exams because they were much more difficult than the homework problems. He did offer office hours, but they were always crowded, and I never felt I got the help I needed. It was a tough experience, and I would not recommend his class to someone who isn't already strong in math.",
+        "subject": "Linear Algebra",
+        "stars": 2
+      },
+      {
+        "professor": "Professor Jane Smith",
+        "review": "Professor Smith is an exceptional teacher who made Introduction to Sociology one of the most interesting classes I've ever taken. Her passion for the subject is infectious, and she encouraged us to think critically about societal issues. One of my favorite parts of the class was a project where we had to analyze a social issue in our community and propose solutions. She provided detailed feedback on our work, which helped me improve my writing and analytical skills. I left her class with a new perspective on the world and a strong foundation in sociology. She's definitely a professor who cares about her students' learning.",
+        "subject": "Introduction to Sociology",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Emily Carter",
+        "review": "Dr. Carter is a very approachable and kind professor, but her Organic Chemistry class was one of the hardest I've ever taken. She explains the material well, but the pace of the course is relentless, and the exams are brutal. I appreciated that she held multiple review sessions before exams and was always willing to answer questions during office hours. However, the problem sets were incredibly difficult, and it often felt like there wasn't enough time to fully grasp the material before we moved on to the next topic. I learned a lot, but it was a real struggle, and I barely managed to pass.",
+        "subject": "Organic Chemistry",
+        "stars": 3
+      },
+      {
+        "professor": "Professor Michael Lee",
+        "review": "Professor Lee's Modern History course was enlightening and engaging. His lectures were well-organized and filled with fascinating stories that brought historical events to life. He has a talent for making connections between past events and current issues, which made the material feel relevant and important. One thing I appreciated was how he encouraged us to debate and discuss different perspectives during class. The research paper he assigned was challenging but fair, and he provided detailed feedback that helped me improve my writing. I would highly recommend his class to anyone interested in history.",
+        "subject": "Modern History",
+        "stars": 4
+      },
+      {
+        "professor": "Dr. Olivia Brown",
+        "review": "Dr. Brown's class on Environmental Science was a mixed experience for me. On the one hand, she is clearly passionate about the subject and is very knowledgeable. Her lectures were full of important information, but they often felt overwhelming because she moved through the material so quickly. I appreciated the hands-on lab sessions, which were well-organized and really helped to reinforce what we learned in class. However, the exams were much harder than I expected, and I felt that they didn't always reflect what was emphasized in the lectures. Overall, it was a tough class, but I did learn a lot.",
+        "subject": "Environmental Science",
+        "stars": 3
+      },
+      {
+        "professor": "Professor Samuel Green",
+        "review": "Professor Green's class on Creative Writing was a game-changer for me. Before taking his class, I struggled with finding my voice as a writer, but his feedback and encouragement helped me grow tremendously. He created a supportive environment where students felt comfortable sharing their work, and he always provided constructive criticism that was both insightful and motivating. I particularly enjoyed the workshops, where we critiqued each other's stories and poems. His passion for literature is evident, and it inspired me to take my writing more seriously. By the end of the semester, I felt like a completely different writer.",
+        "subject": "Creative Writing",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Richard Adams",
+        "review": "Dr. Adams is an excellent professor, but his Advanced Physics class was incredibly demanding. His lectures are thorough, and he does a great job of explaining complex concepts, but the pace of the course is relentless. The problem sets are extremely challenging and require a deep understanding of the material. He is very helpful during office hours, but even with that, the class was a struggle. The exams were fair but very difficult, and I often felt underprepared despite putting in a lot of effort. I ended up doing well, but it took a lot of hard work. This class is not for the faint of heart.",
+        "subject": "Advanced Physics",
+        "stars": 4
+      },
+      {
+        "professor": "Professor Lisa White",
+        "review": "Professor White's Introduction to Psychology was an amazing experience. She has a unique ability to make the subject matter fascinating and relatable. Her lectures were interactive, and she often included case studies that made the theories come to life. One of the highlights of the course was a group project where we had to design a small experiment and analyze the results. She was always available for questions and provided clear guidance throughout the project. Her passion for psychology inspired me to consider it as a major, and I left her class feeling confident in my understanding of the subject.",
+        "subject": "Introduction to Psychology",
+        "stars": 5
+      },
+      {
+        "professor": "Dr. Helen Thompson",
+        "review": "Dr. Thompson's Statistics class was quite challenging, but she was very patient and thorough in her explanations. She used a lot of real-world examples, which helped to make the abstract concepts more understandable. However, the pace of the class was fast, and I often felt like I needed more time to fully grasp the material before moving on to the next topic. Her office hours were very helpful, and she was always willing to go over problems until I understood them. The exams were difficult, but fair, and they reflected what we learned in class. Overall, it was a tough but rewarding experience.",
+        "subject": "Statistics",
+        "stars": 4
+      }
     ]
   }
+  

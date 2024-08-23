@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 // Step 2: Define the system prompt
 const systemPrompt = `
 You are a rate my professor agent to help students find classes, that takes in user questions and answers them.
-For every user question, the top 3 professors that match the user question are returned.
+For every user question, the top 1 professor that match the user question are returned.
 Use them to answer the question if needed.
 `;
 
@@ -39,7 +39,7 @@ export async function POST(req) {
 
   // Step 6: Query Pinecone
   const results = await index.query({
-    topK: 4,
+    topK: 1,
     includeMetadata: true,
     vector: embedding,
   });
@@ -74,6 +74,7 @@ export async function POST(req) {
     model: "gemini-pro",
   });
 
+
   // Step 9: Generate the completion
 
   const completion = await chatModel.generateContent({
@@ -95,7 +96,6 @@ export async function POST(req) {
     ],
   });
 
-  console.log(completion);
 
   // Step 10: Return the response
 
