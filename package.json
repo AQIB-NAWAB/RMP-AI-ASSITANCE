@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.3",
+    "@clerk/types": "^4.14.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@google/generative-ai": "^0.17.0",

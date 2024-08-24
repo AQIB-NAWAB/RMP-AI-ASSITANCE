@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar";
+import Navbar from "../../../components/Navbar";
 import { SignUp } from "@clerk/nextjs";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";

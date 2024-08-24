@@ -12,11 +12,14 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import { SignedIn, SignedOut, UserButton,isLoaded  } from "@clerk/nextjs";
+import Loader from "./Loader";
 
 export default function Navbar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
+
 
   const NavItems = () => (
     <Box display="flex" flexDirection="column" gap={2} padding={2}>
@@ -30,23 +33,46 @@ export default function Navbar() {
           Try Now
         </Button>
       </Link>
-      <Link href="/sign-up" passHref>
-        <Button
-          variant="outlined"
-          sx={{
-            color: "#D3D3D3",
-            backgroundColor: "#020817",
-            borderColor: "#888888",
-            textTransform: "none",
-            "&:hover": {
+      <SignedOut>
+        <Link href="/sign-up" passHref>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#D3D3D3",
               backgroundColor: "#020817",
               borderColor: "#888888",
-            },
-          }}
-        >
-          Register
-        </Button>
-      </Link>
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "#020817",
+                borderColor: "#888888",
+              },
+            }}
+            onClick={toggleDrawer}
+          >
+            Register
+          </Button>
+        </Link>
+      </SignedOut>
+      <SignedIn>
+        <Link href="/" passHref>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#D3D3D3",
+              backgroundColor: "#020817",
+              borderColor: "#888888",
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "#020817",
+                borderColor: "#888888",
+              },
+            }}
+            onClick={toggleDrawer}
+          >
+            Sign Out
+          </Button>
+        </Link>
+      </SignedIn>
     </Box>
   );
 
@@ -63,34 +89,43 @@ export default function Navbar() {
         </Box>
 
         {/* Right Section */}
-        <Box display={{ xs: "none", md: "flex" }} gap={2}>
+        <Box display={{ xs: "none", md: "flex" }} gap={2} alignItems="center">
           <Link href="/aboutus" passHref>
             <Button sx={{ color: "#fff", "&:hover": { color: "#1A3FB3" } }}>
               About
             </Button>
           </Link>
-          <Link href="/bioship" passHref>
+          <Link href="/rate" passHref>
             <Button sx={{ color: "#fff", "&:hover": { color: "#1A3FB3" } }}>
               Try Now
             </Button>
           </Link>
-          <Link href="/sign-up" passHref>
-            <Button
-              variant="outlined"
-              sx={{
-                color: "#D3D3D3",
-                backgroundColor: "#020817",
-                borderColor: "#888888",
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "#020817",
-                  borderColor: "#888888",
-                },
-              }}
-            >
-              Register
-            </Button>
-          </Link>
+          <SignedOut>
+            <Link href="/sign-in" passHref>
+              <Button sx={{ color: "#D3D3D3", textTransform: "none" }} variant="text">
+                Sign In
+              </Button>
+            </Link>
+            <Link href="/sign-up" passHref>
+              <Button
+                sx={{
+                  color: "#D3D3D3",
+                  backgroundColor: "#222222",
+                  border: "1px solid #888888",
+                  textTransform: "none",
+                  "&:hover": {
+                    backgroundColor: "#936DFF",
+                  },
+                }}
+                variant="outlined"
+              >
+                Register
+              </Button>
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </Box>
 
         <IconButton
@@ -99,6 +134,7 @@ export default function Navbar() {
           aria-label="menu"
           sx={{ display: { xs: "block", md: "none" } }}
           onClick={toggleDrawer}
+          size="large"
         >
           <MenuIcon />
         </IconButton>
