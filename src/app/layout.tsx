@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+<<<<<<< Updated upstream
         <body>
           <SignedOut>
             <SignInButton />
@@ -23,6 +24,9 @@ export default function RootLayout({
           </SignedIn>
           {children}
         </body>
+=======
+        <body>{children}</body>
+>>>>>>> Stashed changes
       </html>
     </ClerkProvider>
   );

@@ -18,7 +18,15 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="md:w-1/2 md:pl-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{
+                background: "linear-gradient(180deg, #ffffff, #3B82F6)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
               What is Rate Mate?
             </h2>
             <p className="text-gray-300 mb-6">
