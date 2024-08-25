@@ -12,11 +12,8 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-<<<<<<< Updated upstream
-=======
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Loader from "./Loader";
->>>>>>> Stashed changes
 
 export default function Navbar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -35,25 +32,6 @@ export default function Navbar() {
           Try Now
         </Button>
       </Link>
-<<<<<<< Updated upstream
-      <Link href="/sign-up" passHref>
-        <Button
-          variant="outlined"
-          sx={{
-            color: "#D3D3D3",
-            backgroundColor: "#020817",
-            borderColor: "#888888",
-            textTransform: "none",
-            "&:hover": {
-              backgroundColor: "#020817",
-              borderColor: "#888888",
-            },
-          }}
-        >
-          Register
-        </Button>
-      </Link>
-=======
       <SignedOut>
         <Link href="/sign-up" passHref>
           <Button
@@ -94,7 +72,6 @@ export default function Navbar() {
           </Button>
         </Link>
       </SignedIn>
->>>>>>> Stashed changes
     </Box>
   );
 
@@ -104,9 +81,6 @@ export default function Navbar() {
         {/* Left Section */}
         <Box display="flex" alignItems="center" gap={2}>
           <Link href="/" passHref>
-<<<<<<< Updated upstream
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fff" }}>
-=======
             <Typography
               variant="h6"
               sx={{
@@ -124,51 +98,23 @@ export default function Navbar() {
                 textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
               }}
             >
->>>>>>> Stashed changes
               RATE MATE
             </Typography>
           </Link>
         </Box>
 
         {/* Right Section */}
-<<<<<<< Updated upstream
-        <Box display={{ xs: "none", md: "flex" }} gap={2}>
-=======
         <Box display={{ xs: "none", md: "flex" }} gap={2} alignItems="center">
->>>>>>> Stashed changes
           <Link href="/aboutus" passHref>
             <Button sx={{ color: "#fff", "&:hover": { color: "#1A3FB3" } }}>
               About
             </Button>
           </Link>
-<<<<<<< Updated upstream
-          <Link href="/bioship" passHref>
-=======
           <Link href="/rate" passHref>
->>>>>>> Stashed changes
             <Button sx={{ color: "#fff", "&:hover": { color: "#1A3FB3" } }}>
               Try Now
             </Button>
           </Link>
-<<<<<<< Updated upstream
-          <Link href="/sign-up" passHref>
-            <Button
-              variant="outlined"
-              sx={{
-                color: "#D3D3D3",
-                backgroundColor: "#020817",
-                borderColor: "#888888",
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "#020817",
-                  borderColor: "#888888",
-                },
-              }}
-            >
-              Register
-            </Button>
-          </Link>
-=======
           <SignedOut>
             <Link href="/sign-in" passHref>
               <Button
@@ -198,7 +144,6 @@ export default function Navbar() {
           <SignedIn>
             <UserButton />
           </SignedIn>
->>>>>>> Stashed changes
         </Box>
 
         <IconButton
@@ -207,10 +152,7 @@ export default function Navbar() {
           aria-label="menu"
           sx={{ display: { xs: "block", md: "none" } }}
           onClick={toggleDrawer}
-<<<<<<< Updated upstream
-=======
           size="large"
->>>>>>> Stashed changes
         >
           <MenuIcon />
         </IconButton>
