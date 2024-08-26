@@ -77,8 +77,9 @@ export default function Home() {
           </Typography>
           <Button
             variant="contained"
+            href= "/rate"
+
             sx={{
-              href: "../Rate/page.tsx",
               backgroundColor: "#1D4ED8", // Blue color
               color: "#fff",
               px: 4,

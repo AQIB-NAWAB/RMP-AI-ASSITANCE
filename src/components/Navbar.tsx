@@ -12,7 +12,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { SignedIn, SignedOut, UserButton,isLoaded  } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Loader from "./Loader";
 
 export default function Navbar() {
@@ -20,10 +20,9 @@ export default function Navbar() {
 
   const toggleDrawer = () => setDrawerOpen(!isDrawerOpen);
 
-
   const NavItems = () => (
     <Box display="flex" flexDirection="column" gap={2} padding={2}>
-      <Link href="/aboutus" passHref>
+      <Link href="#aboutus" passHref>
         <Button sx={{ color: "#1A3FB3" }} onClick={toggleDrawer}>
           About
         </Button>
@@ -43,7 +42,7 @@ export default function Navbar() {
               borderColor: "#888888",
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "#020817",
+                backgroundColor: "#1A3FB3",
                 borderColor: "#888888",
               },
             }}
@@ -82,7 +81,23 @@ export default function Navbar() {
         {/* Left Section */}
         <Box display="flex" alignItems="center" gap={2}>
           <Link href="/" passHref>
-            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fff" }}>
+            <Typography
+              variant="h6"
+              sx={{
+                position: "relative",
+                fontWeight: "bold",
+                fontSize: "1.25rem",
+                color: "#fff",
+                display: "inline-block",
+                overflow: "hidden",
+                background: "linear-gradient(90deg, #ffffff, #3B82F6)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textFillColor: "transparent",
+                textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
+              }}
+            >
               RATE MATE
             </Typography>
           </Link>
@@ -90,7 +105,7 @@ export default function Navbar() {
 
         {/* Right Section */}
         <Box display={{ xs: "none", md: "flex" }} gap={2} alignItems="center">
-          <Link href="/aboutus" passHref>
+          <Link href="#aboutus" passHref>
             <Button sx={{ color: "#fff", "&:hover": { color: "#1A3FB3" } }}>
               About
             </Button>
@@ -102,7 +117,10 @@ export default function Navbar() {
           </Link>
           <SignedOut>
             <Link href="/sign-in" passHref>
-              <Button sx={{ color: "#D3D3D3", textTransform: "none" }} variant="text">
+              <Button
+                sx={{ color: "#D3D3D3", textTransform: "none" }}
+                variant="text"
+              >
                 Sign In
               </Button>
             </Link>
@@ -114,7 +132,7 @@ export default function Navbar() {
                   border: "1px solid #888888",
                   textTransform: "none",
                   "&:hover": {
-                    backgroundColor: "#936DFF",
+                    backgroundColor: "#1A3FB3",
                   },
                 }}
                 variant="outlined"
