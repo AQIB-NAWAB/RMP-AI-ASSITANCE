@@ -14,11 +14,20 @@ import Footer from "../components/Footer";
 import Aboutus from "../components/Aboutus";
 import Contactus from "../components/Conactus";
 import Feature from "../components/Feature";
+import Loader from "@/components/Loader";
+import { SignedIn, SignedOut, UserButton,useUser  } from "@clerk/nextjs";
+
 
 export default function Home() {
   // Determine screen size
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
+  const {user,isLoaded} = useUser();
+
+
+  if (!isLoaded) {
+    return <Loader/>;
+  }
   return (
     <Box>
       <Navbar />
