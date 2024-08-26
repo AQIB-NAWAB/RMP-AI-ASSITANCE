@@ -14,24 +14,18 @@ import Footer from "../components/Footer";
 import Aboutus from "../components/Aboutus";
 import Contactus from "../components/Conactus";
 import Feature from "../components/Feature";
-<<<<<<< Updated upstream
-=======
 import Loader from "@/components/Loader";
 import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
->>>>>>> Stashed changes
 
 export default function Home() {
   // Determine screen size
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
-<<<<<<< Updated upstream
-=======
   const { user, isLoaded } = useUser();
 
   if (!isLoaded) {
     return <Loader />;
   }
->>>>>>> Stashed changes
   return (
     <Box>
       <Navbar />
