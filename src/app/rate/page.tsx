@@ -10,8 +10,14 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { useUser } from "@clerk/nextjs";
+import Loader from "@/components/Loader";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const {user,isLoaded,} = useUser();
+  const router = useRouter();
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -49,6 +55,23 @@ export default function Home() {
       console.error("Error sending message:", error);
     }
   };
+
+
+  if(!user?.id) {
+    // redirect to login page
+    router.push("/sign-in");
+  } 
+
+
+
+  if (!isLoaded) {
+    return <Loader />;
+  }
+
+
+
+
+
 
   return (
     <Box
