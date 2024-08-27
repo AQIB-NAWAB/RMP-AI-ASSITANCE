@@ -92,7 +92,7 @@ export default function Home() {
               },
             }}
           >
-            <Link href="./rate/page.tsx" passHref>
+            <Link href="/rate" passHref>
               Get Started
             </Link>
           </Button>
