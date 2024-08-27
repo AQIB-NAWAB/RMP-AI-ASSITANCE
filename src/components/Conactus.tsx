@@ -8,6 +8,8 @@ import {
   TextareaAutosize,
   Checkbox,
   FormControlLabel,
+  Snackbar,
+  Alert
 } from "@mui/material";
 
 export default function ContactSection() {
@@ -15,11 +17,26 @@ export default function ContactSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     // Handle form submission logic here
     console.log({ name, email, message, acceptTerms });
+
+    // Show success snackbar
+    setOpenSnackbar(true);
+
+    // Reset the form fields without refreshing the page
+    setName("");
+    setEmail("");
+    setMessage("");
+    setAcceptTerms(false);
+  };
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
   };
 
   return (
@@ -148,6 +165,26 @@ export default function ContactSection() {
           </form>
         </div>
       </div>
+
+      {/* Snackbar for successful submission */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={4000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{
+            background: "linear-gradient(90deg, #1D4ED8 0%, #3B82F6 100%)",
+            color: "#fff",
+            fontWeight: "bold",
+          }}
+        >
+          Form submitted successfully!
+        </Alert>
+      </Snackbar>
     </section>
   );
 }
