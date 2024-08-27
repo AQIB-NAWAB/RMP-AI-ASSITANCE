@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#020817] text-white py-16 relative overflow-hidden" id="aboutus">
+    <section className="bg-[#020817] text-white py-16 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-8 md:mb-0">
@@ -18,7 +18,15 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="md:w-1/2 md:pl-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{
+                background: "linear-gradient(180deg, #ffffff, #3B82F6)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
               What is Rate Mate?
             </h2>
             <p className="text-gray-300 mb-6">
@@ -28,7 +36,7 @@ export default function AboutSection() {
               about your courses and instructors.
             </p>
             <p className="text-gray-300 mb-6">
-              Whether you are seeking detailed reviews or quick insights, our AI
+              Whether you're seeking detailed reviews or quick insights, our AI
               Assistant is here to help you get the most out of your academic
               experience. It offers personalized recommendations and evaluations
               based on a comprehensive analysis of professor ratings and student
