@@ -26,8 +26,26 @@ export default function ContactSection() {
     <section className="bg-[#020817] text-white py-16 px-4 md:px-8">
       <div className="container mx-auto">
         <h2 className="text-5xl font-bold mb-12 relative">
-          <span className="relative z-10">GET IN TOUCH</span>
-          <span className="absolute top-0 left-0 text-8xl text-gray-800 opacity-10 -z-10">
+          <span
+            className="relative z-10"
+            style={{
+              background: "linear-gradient(180deg, #ffffff, #3B82F6)", 
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            GET IN TOUCH
+          </span>
+          <span
+            className="absolute top-0 left-0 text-8xl text-gray-800 opacity-10 -z-10"
+            style={{
+              background: "linear-gradient(180deg, #ffffff, #3B82F6)", 
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
             CONTACT
           </span>
         </h2>
@@ -112,14 +130,15 @@ export default function ContactSection() {
               type="submit"
               variant="contained"
               sx={{
-                backgroundColor: "#1D4ED8",
+                background: "linear-gradient(90deg, #1D4ED8 0%, #3B82F6 100%)",
                 color: "#fff",
                 fontWeight: "bold",
                 borderRadius: "50px",
                 py: 1.5,
                 px: 4,
                 ":hover": {
-                  backgroundColor: "#1A3FB3",
+                  background:
+                    "linear-gradient(90deg, #1A3FB3 0%, #2563EB 100%)",
                 },
               }}
               fullWidth
