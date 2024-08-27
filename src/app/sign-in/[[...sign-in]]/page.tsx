@@ -11,7 +11,7 @@ export default function SignInPage() {
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: "bold" }}>
             <Link href="/" passHref>
-              Learn Mate
+              RATE MATE
             </Link>
           </Typography>
           <Button color="inherit" sx={{ fontSize: "small" }}>
