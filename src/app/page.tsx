@@ -15,18 +15,16 @@ import Aboutus from "../components/Aboutus";
 import Contactus from "../components/Conactus";
 import Feature from "../components/Feature";
 import Loader from "@/components/Loader";
-import { SignedIn, SignedOut, UserButton,useUser  } from "@clerk/nextjs";
-
+import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 
 export default function Home() {
   // Determine screen size
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
-  const {user,isLoaded} = useUser();
-
+  const { user, isLoaded } = useUser();
 
   if (!isLoaded) {
-    return <Loader/>;
+    return <Loader />;
   }
   return (
     <Box>
@@ -40,7 +38,7 @@ export default function Home() {
           alignItems: "center",
           px: 4,
           py: 6,
-          flexDirection: { xs: "column", md: "row" }, // Adjust for responsiveness
+          flexDirection: { xs: "column", md: "row" },
         }}
       >
         <Box
@@ -55,7 +53,10 @@ export default function Home() {
               fontSize: { xs: "2.3rem", md: "5rem" },
               fontWeight: "bold",
               mb: 3,
-              color: "#fffff", // Blue color for the text
+              background: "linear-gradient(90deg, #ffffff, #3B82F6)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
               lineHeight: 1.2,
             }}
           >
@@ -68,7 +69,7 @@ export default function Home() {
             sx={{
               fontSize: { xs: "1rem", md: "1.5rem" },
               mb: 4,
-              color: "#6B7280", // Grey color for the subtitle
+              color: "#6B7280",
             }}
           >
             Get insightful feedback on your professors
@@ -77,10 +78,8 @@ export default function Home() {
           </Typography>
           <Button
             variant="contained"
-            href= "/rate"
-
             sx={{
-              backgroundColor: "#1D4ED8", // Blue color
+              background: "linear-gradient(90deg, #1D4ED8 0%, #3B82F6 100%)",
               color: "#fff",
               px: 4,
               py: 2,
@@ -89,11 +88,13 @@ export default function Home() {
               fontWeight: "bold",
               textTransform: "none",
               ":hover": {
-                backgroundColor: "#1A3FB3",
+                background: "linear-gradient(90deg, #1A3FB3 0%, #2563EB 100%)",
               },
             }}
           >
-            Get Started
+            <Link href="./rate/page.tsx" passHref>
+              Get Started
+            </Link>
           </Button>
         </Box>
 
@@ -121,23 +122,80 @@ export default function Home() {
       >
         <Link href="#" passHref>
           <Box
-            sx={{ backgroundColor: "#1F2937", padding: 1, borderRadius: "50%" }}
+            sx={{
+              backgroundColor: "#1F2937",
+              padding: 1,
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              transition: "background-color 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                backgroundColor: "#1A3FB3",
+                transform: "scale(1.1)",
+              },
+              "& svg": {
+                transition: "color 0.3s ease",
+                color: "white",
+                "&:hover": {
+                  color: "#ffff",
+                },
+              },
+            }}
           >
-            <Twitter className="w-6 h-6 text-white" />
+            <Twitter className="w-6 h-6" />
           </Box>
         </Link>
         <Link href="#" passHref>
           <Box
-            sx={{ backgroundColor: "#1F2937", padding: 1, borderRadius: "50%" }}
+            sx={{
+              backgroundColor: "#1F2937",
+              padding: 1,
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              transition: "background-color 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                backgroundColor: "#1A3FB3",
+                transform: "scale(1.1)",
+              },
+              "& svg": {
+                transition: "color 0.3s ease",
+                color: "white",
+                "&:hover": {
+                  color: "#ffff",
+                },
+              },
+            }}
           >
-            <Instagram className="w-6 h-6 text-white" />
+            <Instagram className="w-6 h-6" />
           </Box>
         </Link>
         <Link href="#" passHref>
           <Box
-            sx={{ backgroundColor: "#1F2937", padding: 1, borderRadius: "50%" }}
+            sx={{
+              backgroundColor: "#1F2937",
+              padding: 1,
+              borderRadius: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              transition: "background-color 0.3s ease, transform 0.3s ease",
+              "&:hover": {
+                backgroundColor: "#1A3FB3",
+                transform: "scale(1.1)",
+              },
+              "& svg": {
+                transition: "color 0.3s ease",
+                color: "white",
+                "&:hover": {
+                  color: "#ffff",
+                },
+              },
+            }}
           >
-            <Disc className="w-6 h-6 text-white" />
+            <Disc className="w-6 h-6" />
           </Box>
         </Link>
       </Box>
