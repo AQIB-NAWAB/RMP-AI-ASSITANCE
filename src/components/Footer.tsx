@@ -7,15 +7,19 @@ export default function Footer() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const launchDate = new Date("2023-12-31T00:00:00").getTime();
-      const now = new Date().getTime();
+      const launchDate = new Date("2023-12-31T00:00:00Z").getTime(); // Ensure the timezone is correct
+      const now = Date.now(); // Use Date.now() for consistency
       const distance = launchDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        setCountdown({ days: 0, hours: 0, minutes: 0 });
+        return;
+      }
 
       setCountdown({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        ),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
       });
     }, 1000);
